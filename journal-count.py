@@ -1,6 +1,6 @@
 import pandas as pd
 
-csv = r'/Users/mari_cardenas/Desktop/faculty-output-v2/publications-2020.csv'
+csv = 'publications-2020.csv'
 
 df = pd.read_csv(csv)
 
