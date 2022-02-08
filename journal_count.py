@@ -8,7 +8,7 @@ df = pd.read_csv(csv)
 def standardize_plos(name):
     """Stadardizes capitalization of PLOS One journal"""
    
-    plos_variants = ('PloS one', 'PloS One', 'PLOS ONE', 'PLOSOne', 'plos one')
+    plos_variants = ('PloS one', 'PloS ONE', 'PLOS One', 'PloS One', 'PLOS ONE', 'PLOSOne', 'plos one')
     if name in plos_variants:
         return 'PLOS One'
     else: return name
@@ -18,6 +18,8 @@ def standardize_plos(name):
 df['journal_name'] = df['journal_name'].str.strip()
 
 df['journal_name'] = df['journal_name'].apply(standardize_plos)
+
+df['journal_name'] = df['journal_name'].str.lower()
 
 df = df['journal_name'].value_counts().rename_axis('journal').reset_index(name='counts')
 
