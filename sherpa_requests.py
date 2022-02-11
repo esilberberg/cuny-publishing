@@ -7,7 +7,7 @@ journal = 'scientific reports'
 
 issn = '2045-2322'
 
-api_key = '266E8690-89E6-11EC-9535-454FAC726BF1'
+api_key = 'XXXXXXXXX'
 
 full_url = base_url + '?item-type=publication&api-key=' + api_key + '&format=Json&identifier=' + journal
 
