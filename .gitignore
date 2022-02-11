@@ -1,0 +1,8 @@
+# Ignore API key
+SR-api-key.txt
+
+# Ignore csv files
+*.csv
+
+# Ignore excel files
+*.xlsx

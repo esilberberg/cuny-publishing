@@ -1,5 +1,7 @@
 import pandas as pd
 
+"""Tallies the number of publications per school"""
+
 csv = 'publications-2020.csv'
 
 df = pd.read_csv(csv)
