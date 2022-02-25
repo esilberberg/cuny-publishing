@@ -1,4 +1,4 @@
-# FACULTY PRODUCTIVITY
+# Faculty Productivity
 
 A suite of tools to analyze publications by faculty at the twenty-five colleges of the [City University of New York](http://www.cuny.edu/). Created by esilberberg, 2022.
 
@@ -14,8 +14,8 @@ All scripts are designed to be used as command line tools. To make scripts execu
 Produces the journal name for citations in batch from a list of citations in a CSV file or for a single citation entered into the command line.
 
 Examples:
-`$ get_journals.py citations.csv`
-`$ get_journals.py 'Doe, J. (2022) New discoveries. Experimental Sciences Quarterly, 3(1). 14-38.'`
+Usage with CSV file: `$ get_journals.py citations.csv` 
+Usage with single citation: `$ get_journals.py 'Doe, J. (2022) New discoveries. Experimental Sciences Quarterly, 3(1). 14-38.'`
 
 Within the CSV file, ensure that citations are listed under the column heading `citation`. This script runs three tests over each citation to extract the journal name: (1) Does the citation conform to APA format? (2) Does the citation comform to MLA format? (3) Is the word `journal` included in the journal title?
 
@@ -33,7 +33,7 @@ Example:
 In order to run `get_publisher.py`, a Sherpa Romeo API key is required. Visit [Sherpa Romeo](https://v2.sherpa.ac.uk/cgi/register) to generate your key. Save this key to a file `SR-api-key.txt` in the same director as the script to run.
 
 ## Process Flow Chart
-![Process Flow Chart](process-flow-chart.png)
+![Process Flow Chart](process-chart.png)
 
 ## Credits
 [ASCII Text Art Generator](https://fsymbols.com/generators/carty/)
