@@ -14,18 +14,16 @@ def get_args():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=('''
-        █▄░█ ▄▀█ █▀▄▀█ █▀▀
-        █░▀█ █▀█ █░▀░█ ██▄
 
-        █▀ ▀█▀ ▄▀█ █▄░█ █▀▄ ▄▀█ █▀█ █▀▄ █ ▀█ █▀▀ █▀█
-        ▄█ ░█░ █▀█ █░▀█ █▄▀ █▀█ █▀▄ █▄▀ █ █▄ ██▄ █▀▄
+        █▄░█ ▄▀█ █▀▄▀█ █▀▀   █▀ ▀█▀ ▄▀█ █▄░█ █▀▄ ▄▀█ █▀█ █▀▄ █ ▀█ █▀▀ █▀█
+        █░▀█ █▀█ █░▀░█ ██▄   ▄█ ░█░ █▀█ █░▀█ █▄▀ █▀█ █▀▄ █▄▀ █ █▄ ██▄ █▀▄
         corrects journal names
         by eric silberberg, 2022
         '''),
         epilog=('''
                                 
-                ~*~ 𝙟𝙤𝙞𝙣 𝙩𝙝𝙚 𝙘𝙡𝙪𝙗 𝙖𝙩 𝙚𝙧𝙞𝙘𝙨𝙞𝙡𝙗𝙚𝙧𝙗𝙚𝙧𝙜.𝙘𝙤𝙢 ~*~
-. . .
+                ~*~ join the club at ericsilberberg.com ~*~
+.
 '''))
     
     parser.add_argument('journals',
@@ -39,6 +37,7 @@ def get_args():
     return parser.parse_args()
 
 # --------------------------------------------------
+
 def correct_journal_name(name, csv):
     """Stadardizes journal names based on csv file input of approved names"""
     df_approved_names = pd.read_csv(csv)
@@ -51,6 +50,7 @@ def correct_journal_name(name, csv):
         return name
 
 # --------------------------------------------------
+
 def correct_plos(name):
     """Stadardizes capitalization of PLOS One journal"""
     plos_variants = ('PloS one', 'PloS ONE', 'PLOS One',
@@ -64,6 +64,7 @@ def correct_plos(name):
         return name
 
 # --------------------------------------------------
+
 pd.set_option('mode.chained_assignment', None)
 
 def main():
@@ -79,14 +80,13 @@ def main():
         df['journal'][i] = correct_plos(df['journal'][i])
 
     print(df.head())
-    
+     
     filename = os.path.basename(journals_csv)
     basename = filename[:-4]
     outfile_name = f'standardized_{basename}.csv'
     df.to_csv(outfile_name, index=False, encoding='utf-8-sig')
     
-
-
 # --------------------------------------------------
+
 if __name__ == '__main__':
     main()

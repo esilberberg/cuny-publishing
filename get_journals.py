@@ -19,19 +19,19 @@ def get_args():
         description=('''
             █▀▀ █▀▀ ▀█▀   ░░█ █▀█ █░█ █▀█ █▄░█ ▄▀█ █░░ █▀
             █▄█ ██▄ ░█░   █▄█ █▄█ █▄█ █▀▄ █░▀█ █▀█ █▄▄ ▄█
-              parse citations to extract journal names
-                      by eric silberberg, 2022
+            parse citations to extract journal names
+            by eric silberberg, 2022
         '''),
         epilog=('''
                                 
-                ~*~ 𝙟𝙤𝙞𝙣 𝙩𝙝𝙚 𝙘𝙡𝙪𝙗 𝙖𝙩 𝙚𝙧𝙞𝙘𝙨𝙞𝙡𝙗𝙚𝙧𝙗𝙚𝙧𝙜.𝙘𝙤𝙢 ~*~
-. . .
+                ~*~ join the club at ericsilberberg.com ~*~
+.
 '''))
     
     parser.add_argument('citation',
                         metavar='citation',
                         type=str,
-                        help='input citations within a CSV file or a singular citation as text. citations in the CSV file must fall under a column named: citation')
+                        help='input citations within a CSV file or a singular citation as text. citations in the CSV file must fall under a column named <citation>')
     
     now = datetime.now()
     dt_string = now.strftime("%d-%m-%Y-%H-%M-%S")
