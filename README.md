@@ -40,7 +40,7 @@ The script will use the second CSV file to cross reference and correct journal n
 The script outputs a CSV file `standardized_journal-names.csv`.
 
 ## school_count.py
-This is a simple script not currently designed as a command line tool. The script takes input from the user which must be a CSV file with at least a columns labeled `school` and `publications`. The output is a CSV file that tallies the number of publications per school called `school-count.csv`.
+This is a simple script not currently designed as a command line tool. The script takes input from the user that must be a CSV file with a column labeled `school` and column labeled `publications`. The output is a CSV file that tallies the number of publications per school called `school-count.csv`.
 
 ## journal_count.py
 After journal names have been standardized, this script counts the number of publications per journal. Input must take the form of a CSV file with the column heading `journal`. Output is a CSV file `journal-count.csv` that includes a column of journal names and the number of publications for each.
