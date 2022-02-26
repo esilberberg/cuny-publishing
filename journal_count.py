@@ -28,7 +28,7 @@ def get_args():
 '''))
     parser.add_argument('csv',
                         metavar='csv_file',
-                        help='must be a CSV file that includes a column labeled: journal_name')
+                        help='must be a CSV file that includes a column labeled <journal>')
     
     return parser.parse_args()
 
