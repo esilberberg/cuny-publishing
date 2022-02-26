@@ -1,4 +1,5 @@
-🅵🅰🅲🆄🅻🆃🆈 🅿🆁🅾🅳🆄🅲🆃🅸🆅🅸🆃🆈
+# Faculty Productivity
+#### YES
 
 A suite of tools to analyze publications by faculty at the twenty-five colleges of the [City University of New York](http://www.cuny.edu/). Created by esilberberg, 2022.
 
