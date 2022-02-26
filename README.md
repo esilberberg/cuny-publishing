@@ -16,7 +16,7 @@ Produces the journal name for citations in batch from a list of citations in a C
 
 **Examples:**  
 Usage with CSV file: `$ get_journals.py citations.csv`   
-Usage with single citation: `$ get_journals.py 'Doe, J. (2022) New discoveries. Experimental Sciences Quarterly, 3(1). 14-38.'`
+Usage with single citation: `$ get_journals.py 'Doe, J. (2022). New discoveries. Experimental Sciences Quarterly, 3(1). 14-38.'`
 
 Within the CSV file, ensure that citations are listed under the column heading `citation`. This script runs three tests over each citation to extract the journal name:
 1. Does the citation conform to APA format?
