@@ -16,7 +16,8 @@ Produces the journal name for citations in batch from a list of citations in a C
 
 **Examples:**  
 Usage with CSV file: `$ get_journals.py citations.csv`   
-Usage with single citation: `$ get_journals.py 'Doe, J. (2022). New discoveries. Experimental Sciences Quarterly, 3(1). 14-38.'`
+Usage with single citation:  
+`$ get_journals.py 'Doe, J. (2022). New discoveries. Experimental Sciences Quarterly, 3(1). 14-38.'`
 
 Within the CSV file, ensure that citations are listed under the column heading `citation`. This script runs three tests over each citation to extract the journal name:
 1. Does the citation conform to APA format?
@@ -37,7 +38,7 @@ The script will use the second CSV file to cross reference and correct journal n
 **Example:**   
 `$ name_standardizer.py journals.csv approved-names.csv`
 
-The script outputs a CSV file `standardized_journal-names.csv`.
+The script outputs a CSV file `standardized_journal-names.csv`
 
 ## school_count.py
 This is a simple script not currently designed as a command line tool. The script takes input from the user that must be a CSV file with a column labeled `school` and column labeled `publications`. The output is a CSV file that tallies the number of publications per school called `school-count.csv`.
