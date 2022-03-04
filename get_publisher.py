@@ -76,9 +76,9 @@ def main():
             print(publisher_name)
             print('---------------------------')
         except IndexError:
-            publishers.append('Error')
+            publishers.append('No Result Found')
             print(i)
-            print('Error')
+            print('No Result Found')
             print('---------------------------')
             
             
