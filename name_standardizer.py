@@ -43,11 +43,13 @@ def correct_journal_name(name, csv):
     df_approved_names = pd.read_csv(csv)
     df_approved_names.dropna(inplace=True)
     correct_names = df_approved_names.set_index('alt_name').to_dict()['approved_name']
+    correct_names = {k.lower(): v for k, v in correct_names.items()}
 
-    if name in correct_names:
-        return correct_names.get(name)
+    lc_name = str(name).lower()
+    if lc_name in correct_names:
+        return correct_names.get(lc_name)
     else:
-        return name
+        return lc_name
 
 # --------------------------------------------------
 
