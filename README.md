@@ -1,6 +1,6 @@
 # Faculty Productivity
 
-A suite of tools to analyze publications by faculty at the twenty-five colleges of the [City University of New York](http://www.cuny.edu/). Created by esilberberg, 2022.
+A suite of tools to analyze publications by faculty at the twenty-five colleges of the [City University of New York](http://www.cuny.edu/). Created by esilberberg, 2022. Last updated 3/4/2022.
 
 # Overview
 The original data set, compiled by the [Office of Research](https://www.cuny.edu/research/office-of-research/), includes citations of scholarly publications by CUNY faculty from 2015-2020. Given that the data set is unstructured, the project passes the data through a series of operations to improve standardization which in turn enables analysis. First, the project isolates the journal name from the full citation. Next, these names are standardized to conform to the accepted journal name. From there, the project tallies the numbers of journals per college and the number of publications per journal. Lastly, the project determines the publisher of each journal, to give a sense of with which types of publishers faculty are choosing to publish.
@@ -56,8 +56,11 @@ In order to run the script, an API key is required. Visit [Sherpa Romeo](https:/
 
 Output is a CSV file `get-publisher-results.csv` that includes the name of the journal and it's publisher. The script will list the publisher as "Error" in this CSV file if the API cannot successfully find the journal name in its data base.
 
+## publisher_analysis.py
+Determines the (a) total number of publishers, (b) total number of publications, (c) number of unique journal titles per publisher, and (d) the number of individual publications per publisher. Parts A and B are printed to the terminal while parts C and D each are sent to their respective CSV files.
+
 # Process Flow Chart
-![Process Flow Chart](process-chart.png)
+![Process Flow Chart](Process.png)
 
 # Credits
 [ASCII Text Art Generator](https://fsymbols.com/generators/carty/)
